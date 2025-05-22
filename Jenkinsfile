@@ -12,6 +12,11 @@ pipeline {
         AWS_DEFAULT_REGION    = 'ap-south-1'
     }
 
+    tools {
+       // terraform "${TF_VERSION}"
+        terraform 'terraform'
+    }
+
     stages {
         stage('Checkout') {
             steps {
